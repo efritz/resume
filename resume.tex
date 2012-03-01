@@ -1,0 +1,175 @@
+%% ------------------------------------------------------------------------
+%% A template to produce a nice-looking resume.
+%%
+%% Based on Kieran Healy's curriculum vitae template, which can be found at
+%% https://github.com/kjhealy/kjh-vita. 
+%%
+%% ------------------------------------------------------------------------
+%% Requirements (should be included in a modern tex distribution):
+%% ------------------------------------------------------------------------
+%%
+%% xelatex
+%% url.sty
+%% fancyhdr.sty
+%% fontspec.sty
+%% xunicode.sty
+%% color.sty
+%% hyperrref.sty
+%% ------------------------------------------------------------------------
+
+\documentclass[11pt]{article}
+
+%% ------------------------------------------------------------------------
+%% Metadata
+%% ------------------------------------------------------------------------
+
+\def\phone{(608) 774-1120}
+\def\email{eric@eric-fritz.com}
+\def\homepage{http://www.eric-fritz.com}
+
+\def\address{\href{http://www4.uwm.edu/ceas/cs/}{CEAS Department}\\Box ???,\\University of Wisconsin-Milwaukee,\\\vspace{-0.05in} Milwaukee, \textsc{wi} 53201}
+
+\def\accent{FF3838}
+
+%% ------------------------------------------------------------------------
+%% Required style files
+%% ------------------------------------------------------------------------
+
+\usepackage{url}
+\usepackage{fancyhdr}
+\usepackage{fontspec}
+\usepackage{xunicode}
+
+% hyperlink color
+\usepackage[usenames,dvipsnames]{color}
+
+% hyperlinks
+\usepackage[colorlinks=true,urlcolor=BlueViolet,plainpages=false,]{hyperref}
+
+%% ------------------------------------------------------------------------
+%% Fonts
+%% ------------------------------------------------------------------------
+
+\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas}
+\setsansfont[Mapping=tex-text,Colour=\accent]{Myriad Pro}
+\setromanfont[Mapping=tex-text,Numbers={OldStyle}]{Minion Pro}
+
+%% ------------------------------------------------------------------------
+%% Commands
+%% ------------------------------------------------------------------------
+
+% Margin Header
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright \hfill #1}}}}
+
+% Hanging Indent
+\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+
+% Disable bullets on labels
+\renewcommand{\labelitemi}{~} 
+
+%% ------------------------------------------------------------------------
+%% Page Setup
+%% ------------------------------------------------------------------------
+
+% Flip margin so the headers are on the left
+\reversemarginpar
+
+\pagestyle{fancy}
+\fancyhead{}
+\fancyfoot{}
+
+% "Remove" head rule
+\renewcommand{\headrulewidth}{0pt}
+
+%% ------------------------------------------------------------------------
+%% Document
+%% ------------------------------------------------------------------------
+
+\begin{document}
+
+%%
+%% Address Block
+%%
+
+\begin{minipage}[t]{2.95in}
+	\flushright {\footnotesize \address}
+\end{minipage}
+\hfill
+%
+\hfill
+\begin{minipage}[t]{1.7in}
+	\flushright \footnotesize
+	Phone: \phone\\
+	{\scriptsize \texttt{\href{mailto:\email}{\email}}}\\
+	{\scriptsize \texttt{\href{\homepage}{\homepage}}}
+\end{minipage}
+
+\bigskip
+
+%%
+%% Name
+%%
+
+\noindent{\Large {\textsc{eric fritz}}}
+
+\bigskip
+
+%%
+%% Education
+%%
+
+\marginhead{Education}
+
+%% MS Computer Science
+
+\noindent{{\bf MS, Computer Science}\hfill 2011-present \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+
+\ind Some details
+
+\ind Some details
+
+\medskip
+
+%% BFA Film
+
+\noindent{{\bf BFA, Film}\hfill 2007-2011 \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+
+\ind Some details
+
+\ind Some details
+
+\bigskip
+
+%%
+%% Experience
+%%
+
+\marginhead{Experience}
+
+%% Teaching Assistantship
+
+\noindent{{\bf Teaching Assistant}\hfill 2011-present \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+
+\ind Some details
+
+\medskip
+
+%% ESDN, Inc.
+
+\noindent{{\bf Software Developer}\hfill 2008-2009, 2011 \vspace{0.01in}} \\ {\it ESDN, Inc.}
+
+\ind Some details
+
+\bigskip
+
+%%
+%% Skills
+%%
+
+\marginhead{Skills}
+
+%% Fill this out
+
+\ind Not sure what to put here...
+
+\end{document}
