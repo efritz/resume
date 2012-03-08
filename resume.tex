@@ -27,7 +27,7 @@
 \def\email{eric@eric-fritz.com}
 \def\homepage{http://www.eric-fritz.com}
 
-\def\address{\href{http://www4.uwm.edu/ceas/cs/}{CEAS Department}\\Box ???,\\University of Wisconsin-Milwaukee,\\\vspace{-0.05in} Milwaukee, \textsc{wi} 53201}
+\def\address{\href{http://www4.uwm.edu/ceas/cs/}{CEAS Department} \\ 3400 N. Cramer, \\ \vspace{-0.05in} Milwaukee, \textsc{wi} 53201}
 
 \def\accent{FF3838}
 
@@ -39,6 +39,11 @@
 \usepackage{fancyhdr}
 \usepackage{fontspec}
 \usepackage{xunicode}
+\usepackage{setspace}
+\usepackage{enumitem}
+
+% page margins
+\usepackage[left=1.5in,top=1.25in,right=1.5in,bottom=1in,nohead]{geometry}
 
 % hyperlink color
 \usepackage[usenames,dvipsnames]{color}
@@ -59,7 +64,7 @@
 %% ------------------------------------------------------------------------
 
 % Margin Header
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1em}\flushright \hfill #1}}}}
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1.35em}\flushright \hfill #1}}}}
 
 % Hanging Indent
 \def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
@@ -82,6 +87,16 @@
 \renewcommand{\headrulewidth}{0pt}
 
 %% ------------------------------------------------------------------------
+%% Enumeration Style
+%% ------------------------------------------------------------------------
+
+% Remove vertical spacing around itemize
+\setlist{nolistsep}
+
+% Replace bullet with a small centered dot
+\renewcommand{\labelitemi}{}
+
+%% ------------------------------------------------------------------------
 %% Document
 %% ------------------------------------------------------------------------
 
@@ -98,19 +113,36 @@
 %
 \hfill
 \begin{minipage}[t]{1.7in}
-	\flushright \footnotesize
-	Phone: \phone\\
-	{\scriptsize \texttt{\href{mailto:\email}{\email}}}\\
-	{\scriptsize \texttt{\href{\homepage}{\homepage}}}
+	\flushright \footnotesize Phone: \phone\\ {\scriptsize \texttt{\href{mailto:\email}{\email}}} \\ {\scriptsize \texttt{\href{\homepage}{\homepage}}}
 \end{minipage}
+
+\bigskip
+\bigskip
+
+%%
+%% Introduction
+%%
+
+\noindent{\bf\Large {\textsc{eric fritz}}}
+
+\bigskip
+
+\noindent {\small Programmer who is passionate about software seeks a challenging position as a software developer, working on interesting problems with creative solutions.}
 
 \bigskip
 
 %%
-%% Name
+%% Skills
 %%
 
-\noindent{\Large {\textsc{eric fritz}}}
+\marginhead{Skills}
+
+\begin{description}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\item[Languages] {\small PHP, C\#, Python, SQL, HTML/5, CSS/3, Javascript/jQuery}
+	\item[Environments] {\small .NET and stuff}
+	\end{spacing}
+\end{description}
 
 \bigskip
 
@@ -122,54 +154,61 @@
 
 %% MS Computer Science
 
-\noindent{{\bf MS, Computer Science}\hfill 2011-present \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\vspace{-.75mm}
+\noindent{{\bf MS, Computer Science}\hfill (2011-present) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
 
-\ind Some details
-
-\ind Some details
+\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\item Some details
+	\item Some details
+	\end{spacing}
+\end{itemize}
 
 \medskip
 
 %% BFA Film
 
-\noindent{{\bf BFA, Film}\hfill 2007-2011 \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\noindent{{\bf BFA, Film}\hfill (2007-2011) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
 
-\ind Some details
-
-\ind Some details
+\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\item Graduated Cum Laude, 3.593 GPA, with a minor in Computer Science. Relevant coursework emphasized the study and composition of common data structures (B-trees, graphs, hash tables), as well as functional and logical languages and programming language design.
+	\end{spacing}
+\end{itemize}
 
 \bigskip
 
 %%
-%% Experience
+%% Career History
 %%
 
-\marginhead{Experience}
+\marginhead{Career History}
 
 %% Teaching Assistantship
 
-\noindent{{\bf Teaching Assistant}\hfill 2011-present \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\noindent{{\bf Teaching Assistant}\hfill (2011-present) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
 
-\ind Some details
+\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\item Lead two lectures/laboratories (around 30 students, combined) for an Introduction to Computer Programming course.
+	\end{spacing}
+\end{itemize}
 
 \medskip
 
 %% ESDN, Inc.
 
-\noindent{{\bf Software Developer}\hfill 2008-2009, 2011 \vspace{0.01in}} \\ {\it ESDN, Inc.}
+\noindent{{\bf Software Developer}\hfill (2008-2009, 2011) \vspace{0.01in}} \\ {\it ESDN, Inc.}
 
-\ind Some details
 
-\bigskip
-
-%%
-%% Skills
-%%
-
-\marginhead{Skills}
-
-%% Fill this out
-
-\ind Not sure what to put here...
+\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\item Worked within a team of five members to debug and resolve relational database issues, providing a more performant and data-consistent application.
+	\item Designed an application that created and managed logical groups of jewelry products to meet a particular client's use-case.
+	\item Redesigned and implemented an organizations/locations management application which provided more functionality and a better user experience than its predecessor.
+	\item Created an e-marketing system for jewelry retailer clients.
+	\item Developed new and improved existing internal tools to increase the productivity of our customer relations and data management staff.
+	\end{spacing}
+\end{itemize}
 
 \end{document}
