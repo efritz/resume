@@ -42,8 +42,11 @@
 \usepackage{setspace}
 \usepackage{enumitem}
 
+% Suppress hyphenation
+\usepackage[none]{hyphenat}
+
 % page margins
-\usepackage[left=1.5in,top=1.25in,right=1.5in,bottom=1in,nohead]{geometry}
+\usepackage[left=1.5in,top=1in,right=1.5in,bottom=1in,nohead]{geometry}
 
 % hyperlink color
 \usepackage[usenames,dvipsnames]{color}
@@ -86,6 +89,9 @@
 % "Remove" head rule
 \renewcommand{\headrulewidth}{0pt}
 
+% Create custom font size
+\newcommand{\smaller}{\fontsize{9}{11}\selectfont}
+
 %% ------------------------------------------------------------------------
 %% Enumeration Style
 %% ------------------------------------------------------------------------
@@ -117,7 +123,6 @@
 \end{minipage}
 
 \bigskip
-\bigskip
 
 %%
 %% Introduction
@@ -132,15 +137,16 @@
 \bigskip
 
 %%
-%% Skills
+%% Projects
 %%
 
-\marginhead{Skills}
+\marginhead{Projects}
 
 \begin{description}
 	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item[Languages] {\small PHP, C\#, Python, SQL, HTML/5, CSS/3, Javascript/jQuery}
-	\item[Environments] {\small .NET and stuff}
+	\item[Minuet] {\small A PHP5 request-response framework that provides resource routing and a simple abstraction over the HTTP lifecycle. {\it Minuet} is meant to be a framework for building web APIs that are RESTful and self-documenting.}
+	\item[Couple] {\small A PHP5 library that transforms rigidly-defined plaintext documents, such as JSON or XML, into domain objects. {\it Couple} also provides validation of hydrated objects, as well as serialization.}
+	\item[Lunar Fever] {\small A prototype game 2D-rendering and physics engine built with Java and AWT.}
 	\end{spacing}
 \end{description}
 
@@ -154,27 +160,29 @@
 
 %% MS Computer Science
 
-\vspace{-.75mm}
-\noindent{{\bf MS, Computer Science}\hfill (2011-present) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\noindent{{\bf MS, Computer Science}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}
 
-\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+\begin{description}
 	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item Some details
-	\item Some details
+	
+	\item[\smaller GPA:] {\small 4.0/4.0}
+	\item[\smaller Relevant Courses:] {\small CS535 - Algorithm Design \& Analysis, CS537 - Operating Systems, CS458 - Computer Architecture, CS317 - Discrete Information Structures, MATH231/232 - Calculus I \& II}
+	
 	\end{spacing}
-\end{itemize}
-
-\medskip
+\end{description}
 
 %% BFA Film
 
-\noindent{{\bf BFA, Film}\hfill (2007-2011) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\noindent{{\bf BFA, Film}\hfill (2007-2011)} \\ {\it University of Wisconsin-Milwaukee}
 
-\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+\begin{description}
 	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item Graduated Cum Laude, 3.593 GPA, with a minor in Computer Science. Relevant coursework emphasized the study and composition of common data structures (B-trees, graphs, hash tables), as well as functional and logical languages and programming language design.
+	
+	\item[\smaller GPA:] {\small 3.593/4.0}
+	\item[\smaller Relevant Courses:] {\small CS351 - Data Structures and Algorithms, CS431 - Programming Langauge Concepts, CS315 - Assembly Language Programming}
+	
 	\end{spacing}
-\end{itemize}
+\end{description}
 
 \bigskip
 
@@ -186,29 +194,33 @@
 
 %% Teaching Assistantship
 
-\noindent{{\bf Teaching Assistant}\hfill (2011-present) \vspace{0.01in}} \\ {\it University of Wisconsin-Milwaukee}
+\noindent{{\bf Teaching Assistant} for {\href{http://www.cs.uwm.edu/classes/cs201/semester/index.html}{CS-201: Computer Programming}}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}
 
-\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item Lead two lectures/laboratories (around 30 students, combined) for an Introduction to Computer Programming course.
-	\end{spacing}
-\end{itemize}
+\noindent        Conducted two laboratory sections per semester, about 20 students each
+{\large $\cdot$} Evaluated and maintained grades for student homework, quizzes, and exams
+{\large $\cdot$} Prepared and presented new programming concepts and techniques.
 
-\medskip
+\bigskip
 
 %% ESDN, Inc.
 
-\noindent{{\bf Software Developer}\hfill (2008-2009, 2011) \vspace{0.01in}} \\ {\it ESDN, Inc.}
+\noindent{{\bf Software Developer}\hfill (2008-2009, 2011)} \\ {\it ESDN, Inc.}
 
-
-\begin{itemize}[leftmargin=0cm,itemindent=0cm,labelwidth=0cm,labelsep=0cm,align=left]
+\begin{description}
 	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item Worked within a team of five members to debug and resolve relational database issues, providing a more performant and data-consistent application.
-	\item Designed an application that created and managed logical groups of jewelry products to meet a particular client's use-case.
-	\item Redesigned and implemented an organizations/locations management application which provided more functionality and a better user experience than its predecessor.
-	\item Created an e-marketing system for jewelry retailer clients.
-	\item Developed new and improved existing internal tools to increase the productivity of our customer relations and data management staff.
+	
+	\item[\smaller Languages:] {\small C\#, Java, SQL, Javascript/jQuery, HTML5, CSS3}
+	\item[\smaller Technologies \& Tools:] {\small ASP.NET MVC, Linq, Razor, MySQL, SVN}
+	
 	\end{spacing}
-\end{itemize}
+\end{description}
+
+\vspace{-.25cm}
+
+\noindent        Developed and maintained a customizable e-commerce platform for hundreds of jewelry retailers and brands
+{\large $\cdot$} Maintained constant communication with designers, testers, and database developers to ensure quality work
+{\large $\cdot$} Designed and implemented an application which managed `collections' of jewelry products between brands
+{\large $\cdot$} Redesigned and implemented a locations management application which provided highly-demanded features and a better UX than its predecessor
+{\large $\cdot$} Implemented an e-marketing system for jewelry retailers.
 
 \end{document}
