@@ -32,7 +32,7 @@
 \usepackage[none]{hyphenat}
 
 % page margins
-\usepackage[left=1.5in,top=1in,right=1.5in,bottom=1in,nohead]{geometry}
+\usepackage[left=1.25in,right=1in,top=1.25in,bottom=1in,nohead]{geometry}
 
 % hyperlink color
 \usepackage[usenames,dvipsnames]{color}
@@ -53,10 +53,10 @@
 %% ------------------------------------------------------------------------
 
 % Margin Header
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\vspace{-1.35em}\flushright \hfill #1}}}}
-
-% Hanging Indent
-\def\ind{\hangindent=1 true cm\hangafter=1 \noindent}
+% Note: as the document goes on you may need to introduce a (gradually increasing)
+% \vspace element to keep the marginal header pleasingly aligned with the first item
+% in the body text.  See below for examples
+\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\flushright #1}}}}
 
 % Disable bullets on labels
 \renewcommand{\labelitemi}{~} 
@@ -109,6 +109,8 @@
 \end{minipage}
 
 \bigskip
+\bigskip
+\bigskip
 
 %%
 %% Introduction
@@ -118,7 +120,7 @@
 
 \bigskip
 
-\noindent {\small Programmer who is passionate about software seeks a challenging position as a software developer, working on interesting problems with creative solutions.}
+\noindent {\small Programmer who is passionate about software seeks a position as a developer, overcoming challenging problems with creative solutions.}
 
 \bigskip
 
@@ -126,79 +128,100 @@
 %% Projects
 %%
 
-\marginhead{Projects}
-
-\vspace{-0.01in}
+\marginhead{{\vskip -1em}\hfill Projects}
 
 \begin{description}
 	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	\item[Minuet] {\small A PHP5 request-response framework that provides resource routing and a simple abstraction over the HTTP lifecycle. {\it Minuet} is meant to be a framework for building web APIs that are RESTful and self-documenting.}
+	
+	\item[Minuet] {\small A request-response framework written in PHP5 that provides resource routing and a simple abstraction over the HTTP lifecycle. {\it Minuet} is meant to be a framework for building web APIs that are RESTful and self-documenting.}
 	\item[Couple] {\small A PHP5 library that transforms rigidly-defined plaintext documents, such as JSON or XML, into domain objects. {\it Couple} also provides validation of hydrated objects, as well as serialization.}
-	\item[Lunar Fever] {\small A prototype game 2D-rendering and physics engine built with Java and AWT.}
+	\item[Lunar Fever] {\small A prototype game 2D-rendering and physics engine built with Java7 and AWT.}
+
 	\end{spacing}
 \end{description}
 
-\bigskip
+%%
+%% Skills
+%%
+
+\marginhead{{\vskip -1.5em}\hfill Skills}
+
+\begin{description}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
+	
+	\item[Proficient With: ] {\small 
+		% Languages
+		PHP, C\#, Java, Python, SQL, HTML/5, CSS/3, Javascript, jQuery
+		% Platforms
+		ASP.NET, ASP.NET MVC 3,
+		% Databases
+		MySQL, MsSQL,
+		% Tools
+		Git, Subversion, Mercurial,
+		% Operating Systems and Platforms
+		Microsoft Windows, Mac OS X, UNIX, Linux (Ubuntu Server 10.04+)
+	}
+	
+	\item[Familiar With or Interested In: ] {\small
+		% Languages
+		C, C++, VB.NET, Scala, Ruby,
+		% Typesetting
+		\TeX, \LaTeX,
+		% Databases 
+		MongoDB, CouchDB, FlockDB, Redis
+		% 
+	}
+
+	\end{spacing}
+\end{description}
 
 %%
 %% Education
 %%
 
-\marginhead{Education}
+\marginhead{{\vskip -1.35em}\hfill Education}
 
 %% MS Computer Science
 
-\noindent{{\bf MS, Computer Science}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}
+\noindent {{\bf MS in Computer Science}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
 
 \begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
 	
-	\item[\smaller GPA:] {\small 4.0/4.0}
-	\item[\smaller Relevant Courses:] {\small CS535 - Algorithm Design \& Analysis, CS537 - Operating Systems, CS458 - Computer Architecture, CS317 - Discrete Information Structures, MATH231/232 - Calculus I \& II}
+	\item[\smaller GPA:] {\small {\bf 4.0/4.0}}
+	\item[\smaller Relevant Courses:] {\small Analysis of time and space requirements of and design of algorithms $\cdot$ Operating Systems $\cdot$ Processor organization and design}
 	
 	\end{spacing}
 \end{description}
 
 %% BFA Film
 
-\noindent{{\bf BFA, Film}\hfill (2007-2011)} \\ {\it University of Wisconsin-Milwaukee}
+\noindent {{\bf BFA in Film, Minor in Computer Science}\hfill (2007-2011)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
 
 \begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
 	
 	\item[\smaller GPA:] {\small 3.593/4.0}
-	\item[\smaller Relevant Courses:] {\small CS351 - Data Structures and Algorithms, CS431 - Programming Langauge Concepts, CS315 - Assembly Language Programming}
+	\item[\smaller Honors:] {\small Cum Laude, Dean's Honor List, Senior Honors}
+	\item[\smaller Relevant Courses] {\small Programming in a structured, high-level, object-oriented language $\cdot$} Examination of abstract features of languages $\cdot$ Assembly and machine language programming
 	
 	\end{spacing}
 \end{description}
-
-\bigskip
 
 %%
 %% Career History
 %%
 
-\marginhead{Career History}
-
-%% Teaching Assistantship
-
-\noindent{{\bf Teaching Assistant} for {\href{http://www.cs.uwm.edu/classes/cs201/semester/index.html}{CS-201: Computer Programming}}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}
-
-\noindent        Conducted two laboratory sections per semester, about 20 students each
-{\large $\cdot$} Evaluated and maintained grades for student homework, quizzes, and exams
-{\large $\cdot$} Prepared and presented new programming concepts and techniques.
-
-\bigskip
+\marginhead{{\vskip -1.35em}\hfill Career History}
 
 %% ESDN, Inc.
 
-\noindent{{\bf Software Developer}\hfill (2008-2009, 2011)} \\ {\it ESDN, Inc.}
+\noindent {{\bf Software Developer}\hfill (2008-2009, 2011)} \\ {\it ESDN, Inc.}\hfill Janesville, WI
 
 \begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
 	
-	\item[\smaller Languages:] {\small C\#, Java, SQL, Javascript/jQuery, HTML5, CSS3}
-	\item[\smaller Technologies \& Tools:] {\small ASP.NET MVC, Linq, Razor, MySQL, SVN}
+	\item[\smaller Technologies:] {\small C\#, Java, SQL (MySQL and MsSQL), ASP.NET MVC3, LINQ to SQL, HTML, CSS, Javascript, jQuery, Subversion}
 	
 	\end{spacing}
 \end{description}
@@ -207,8 +230,57 @@
 
 \noindent        Developed and maintained a customizable e-commerce platform for hundreds of jewelry retailers and brands
 {\large $\cdot$} Maintained constant communication with designers, testers, and database developers to ensure quality work
-{\large $\cdot$} Designed and implemented an application which managed `collections' of jewelry products between brands
+{\large $\cdot$} Designed and implemented an application that managed `collections' of jewelry products between brands
 {\large $\cdot$} Redesigned and implemented a locations management application which provided highly-demanded features and a better UX than its predecessor
 {\large $\cdot$} Implemented an e-marketing system for jewelry retailers.
+
+\bigskip
+
+%% ZoomShift, Inc.
+
+\newpage
+
+\noindent {{\bf Freelance Software Developer}\hfill (2011)} \\ {\it \href{http://www.zoomshift.com/}{ZoomShift} and EMM Holdings, LLC.}\hfill Milwaukee, WI
+
+\begin{description}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
+	
+	\item[\smaller Technologies:] {\small PHP, SQL (MySQL), \href{http://twig.sensiolabs.org/}{Twig}, \href{http://www.doctrine-project.org/}{Doctrine2}, HTML, CSS, Javascript, jQuery, Git}
+	
+	\end{spacing}
+\end{description}
+
+\vspace{-.25cm}
+
+\noindent        Worked with an accelerated startup
+{\large $\cdot$} Implemented an administrative panel for organization and employee management
+{\large $\cdot$} Conversion of raw PHP templates into hierarchal and reusable components using the Twig template engine
+{\large $\cdot$} Preparatory work for migrating raw SQL queries into a separate model layer using the Doctrine2 SQL ORM.
+
+\bigskip
+
+%%
+%% Teaching Experience
+%%
+
+\marginhead{{\vskip -1.15em}\hfill Teaching}
+
+%% Teaching Assistantship
+
+\noindent {{\bf Teaching Assistant} for {\href{http://www.cs.uwm.edu/classes/cs201/semester/index.html}{CS-201: Computer Programming}}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
+
+\begin{description}
+	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
+	
+	\item[\smaller Technologies:] {\small Java, \TeX/\LaTeX}
+	
+	\end{spacing}
+\end{description}
+
+\vspace{-.25cm}
+
+\noindent        Conducted two laboratory sections per semester, about 20 students each
+{\large $\cdot$} Evaluated and maintained grades for student homework, quizzes, and exams
+{\large $\cdot$} Prepared and presented new programming concepts and techniques.
 
 \end{document}
