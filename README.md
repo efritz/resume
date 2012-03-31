@@ -11,7 +11,7 @@ Install Latex and download the moderncv theme. Place the moderncv theme somewher
         my-resume.pdf
         /moderncv
 
-Simply use the ``pdflatex`` command in your terminal::
+Simply use the ``pdflatex`` command in your terminal:
 
     pdflatex my-resume.tex
 
