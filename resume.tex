@@ -1,286 +1,121 @@
 %% ------------------------------------------------------------------------
 %% A template to produce a nice-looking resume.
 %%
-%% Based on Kieran Healy's curriculum vitae template, which can be found at
-%% https://github.com/kjhealy/kjh-vita. 
+%% Copyright 2006-2010 Xavier Danaux (xdanaux@gmail.com).
+%% Copyright 2010-2011 Mark Liu (markwayneliu@gmail.com).
+%% Copyright 2011-2012 Eric Fritz (eric@eric-fritz.com).
+%%
+%% This work may be distributed and/or modified under the
+%% conditions of the LaTeX Project Public License version 1.3c,
+%% available at http://www.latex-project.org/lppl/.
 %% ------------------------------------------------------------------------
 
-\documentclass[11pt]{article}
+\documentclass[10pt,a4paper,nolmodern]{moderncv}
+
+\usepackage{ericfritz}
 
 %% ------------------------------------------------------------------------
-%% Metadata
-%% ------------------------------------------------------------------------
-
-\def\phone{(608) 774-1120}
-\def\email{eric@eric-fritz.com}
-\def\homepage{http://www.eric-fritz.com}
-
-\def\address{\href{http://www4.uwm.edu/ceas/cs/}{CEAS Department} \\ 3400 N. Cramer, \\ \vspace{-0.05in} Milwaukee, \textsc{wi} 53201}
-
-%% ------------------------------------------------------------------------
-%% Required style files
-%% ------------------------------------------------------------------------
-
-\usepackage{url}
-\usepackage{fancyhdr}
-\usepackage{fontspec}
-\usepackage{xunicode}
-\usepackage{setspace}
-\usepackage{enumitem}
-
-% Suppress hyphenation
-\usepackage[none]{hyphenat}
-
-% page margins
-\usepackage[left=1.25in,right=1in,top=1.25in,bottom=1in,nohead]{geometry}
-
-% hyperlink color
-\usepackage[usenames,dvipsnames]{color}
-
-% hyperlinks
-\usepackage[colorlinks=true,urlcolor=BlueViolet,plainpages=false,]{hyperref}
-
-%% ------------------------------------------------------------------------
-%% Fonts
-%% ------------------------------------------------------------------------
-
-\setmonofont[Mapping=tex-text,Scale=0.9]{Consolas}
-\setsansfont[Mapping=tex-text,Colour=FF3838]{Myriad Pro}
-\setromanfont[Mapping=tex-text,Numbers={OldStyle}]{Minion Pro}
-
-%% ------------------------------------------------------------------------
-%% Commands
-%% ------------------------------------------------------------------------
-
-% Margin Header
-% Note: as the document goes on you may need to introduce a (gradually increasing)
-% \vspace element to keep the marginal header pleasingly aligned with the first item
-% in the body text.  See below for examples
-\newcommand{\marginhead}[1]{\marginpar{\textsf{{\footnotesize\flushright #1}}}}
-
-% Disable bullets on labels
-\renewcommand{\labelitemi}{~} 
-
-%% ------------------------------------------------------------------------
-%% Page Setup
-%% ------------------------------------------------------------------------
-
-% Flip margin so the headers are on the left
-\reversemarginpar
-
-\pagestyle{fancy}
-\fancyhead{}
-\fancyfoot{}
-
-% "Remove" head rule
-\renewcommand{\headrulewidth}{0pt}
-
-% Create custom font size
-\newcommand{\smaller}{\fontsize{9}{11}\selectfont}
-
-%% ------------------------------------------------------------------------
-%% Enumeration Style
-%% ------------------------------------------------------------------------
-
-% Remove vertical spacing around itemize
-\setlist{nolistsep}
-
-% Replace bullet with a small centered dot
-\renewcommand{\labelitemi}{}
-
-%% ------------------------------------------------------------------------
-%% Document
+%% Resume
 %% ------------------------------------------------------------------------
 
 \begin{document}
 
-%%
-%% Address Block
-%%
-
-\begin{minipage}[t]{2.95in}
-	\flushright {\footnotesize \address}
-\end{minipage}
-\hfill
-%
-\hfill
-\begin{minipage}[t]{1.7in}
-	\flushright \footnotesize Phone: \phone\\ {\scriptsize \texttt{\href{mailto:\email}{\email}}} \\ {\scriptsize \texttt{\href{\homepage}{\homepage}}}
-\end{minipage}
-
-\bigskip
-\bigskip
-\bigskip
+\maketitle
 
 %%
 %% Introduction
 %%
 
-\noindent{\bf\Large {\textsc{eric fritz}}}
-
-\bigskip
-
-\noindent {\small Programmer who is passionate about software seeks a position as a developer, overcoming challenging problems with creative solutions.}
-
-\bigskip
-
-%%
-%% Projects
-%%
-
-\marginhead{{\vskip -1em}\hfill Projects}
-
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1.2}
-	
-	\item[Minuet] {\small A request-response framework written in PHP5 that provides resource routing and a simple abstraction over the HTTP lifecycle. {\it Minuet} is meant to be a framework for building web APIs that are RESTful and self-documenting.}
-	\item[Couple] {\small A PHP5 library that transforms rigidly-defined plaintext documents, such as JSON or XML, into domain objects. {\it Couple} also provides validation of hydrated objects, as well as serialization.}
-	\item[Lunar Fever] {\small A prototype game 2D-rendering and physics engine built with Java7 and AWT.}
-
-	\end{spacing}
-\end{description}
+Programmer who is passionate about software seeks a position as a developer, overcoming challenging problems with creative solutions.
 
 %%
 %% Skills
 %%
 
-\marginhead{{\vskip -1.5em}\hfill Skills}
+\section{Skills}
 
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[Proficient With: ] {\small 
-		% Languages
-		PHP, C\#, Java, Python, SQL, HTML/5, CSS/3, Javascript, jQuery
-		% Platforms
-		ASP.NET, ASP.NET MVC 3,
-		% Databases
-		MySQL, MsSQL,
-		% Tools
-		Git, Subversion, Mercurial,
-		% Operating Systems and Platforms
-		Microsoft Windows, Mac OS X, UNIX, Linux (Ubuntu Server 10.04+)
-	}
-	
-	\item[Familiar With or Interested In: ] {\small
-		% Languages
-		C, C++, VB.NET, Scala, Ruby,
-		% Typesetting
-		\TeX, \LaTeX,
-		% Databases 
-		MongoDB, CouchDB, FlockDB, Redis
-		% 
-	}
+\subsection{Extremely Proficient With}
+\cvcomputer{Languages}{PHP, C\#, Java, Python, SQL, JavaScript}
+           {OS}{Windows, Ubuntu \& Debian, OSX}
+\cvcomputer{Databases}{MySQL, MsSQL, SQLite}
+           {Web}{HTML, CSS, jQuery, AJAX}
+\cvcomputer{Frameworks}{ASP.NET MVC3, Symfony2}
+           {Tools}{Visual Studio, Eclipse, Git, Subversion}
 
-	\end{spacing}
-\end{description}
+\subsection{Have Experience With}
+\cvcomputer{Languages}{C, C++, VB.NET, Scala, Ruby, Haskell}
+           {Tools}{\LaTeX{}, Apache, Mercurial}
+\cvcomputer{Databases}{Redis, MongoDB, CouchDB, FlockDB}
+           {}{}
 
 %%
 %% Education
 %%
 
-\marginhead{{\vskip -1.35em}\hfill Education}
+\section{Education}
 
 %% MS Computer Science
 
-\noindent {{\bf MS in Computer Science}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
+\cventry{2001-present}{MS, Computer Science}{University of Wisconsin - Milwaukee}{Milwaukee, WI}{}{
+GPA: 4.0/4.0\\
+Relevant Coursework:
+}
 
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[\smaller GPA:] {\small {\bf 4.0/4.0}}
-	\item[\smaller Relevant Courses:] {\small Analysis of time and space requirements of and design of algorithms $\cdot$ Operating Systems $\cdot$ Processor organization and design}
-	
-	\end{spacing}
-\end{description}
+\cvlistdoubleitem{Discrete Mathematics}{Algorithm Design \& Analysis}
+\cvlistdoubleitem{Computer Architecture}{Operating Systems}
 
 %% BFA Film
 
-\noindent {{\bf BFA in Film, Minor in Computer Science}\hfill (2007-2011)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
+\cventry{2007-2011}{BFA, Film - Minor, Computer Science}{University of Wisconsin - Milwaukee}{Milwaukee, WI}{}{
+GPA: 3.593/4.0\\
+Honors: Cum Laude, Dean's Honor List, Senior Honors\\
+Relevant Coursework:
+}
 
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[\smaller GPA:] {\small 3.593/4.0}
-	\item[\smaller Honors:] {\small Cum Laude, Dean's Honor List, Senior Honors}
-	\item[\smaller Relevant Courses] {\small Programming in a structured, high-level, object-oriented language $\cdot$} Examination of abstract features of languages $\cdot$ Assembly and machine language programming
-	
-	\end{spacing}
-\end{description}
+\cvlistdoubleitem{Data Structures}{Assembly and Machine Language Programming}
+\cvlistdoubleitem{Programming Language Concepts}{}
 
 %%
 %% Career History
 %%
 
-\marginhead{{\vskip -1.35em}\hfill Career History}
+\section{Experience}
+
+\subsection{Career History}
 
 %% ESDN, Inc.
 
-\noindent {{\bf Software Developer}\hfill (2008-2009, 2011)} \\ {\it ESDN, Inc.}\hfill Janesville, WI
+\cventry{2008-2009, 2011}{Software Developer}{ESDN, Inc.}{Janesville, WI}{}{
+Developed and maintained a customizable e-commerce platform for hundreds of jewelry retailers and brands.
+Maintained constant communication with designers, testers, and database developers to ensure quality work.
+Designed and implemented an application that managed `collections' of jewelry products between brands.
+Redesigned and implemented a locations management application which provided highly-demanded features and a better UX than its predecessor.
+Implemented an e-marketing system for jewelry retailers.  
+}
 
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[\smaller Technologies:] {\small C\#, Java, SQL (MySQL and MsSQL), ASP.NET MVC3, LINQ to SQL, HTML, CSS, Javascript, jQuery, Subversion}
-	
-	\end{spacing}
-\end{description}
-
-\vspace{-.25cm}
-
-\noindent        Developed and maintained a customizable e-commerce platform for hundreds of jewelry retailers and brands
-{\large $\cdot$} Maintained constant communication with designers, testers, and database developers to ensure quality work
-{\large $\cdot$} Designed and implemented an application that managed `collections' of jewelry products between brands
-{\large $\cdot$} Redesigned and implemented a locations management application which provided highly-demanded features and a better UX than its predecessor
-{\large $\cdot$} Implemented an e-marketing system for jewelry retailers.
-
-\bigskip
+\cvline{}{Technologies used: C\#, Java, SQL (MySQL and MsSQL), ASP.NET MVC3, LINQ to SQL, HTML, CSS, Javascript, jQuery, Subversion\medskip}
 
 %% ZoomShift, Inc.
 
-\newpage
+\cventry{2011}{Freelance Software Developer}{EMM Holdings, LLC.}{Milwaukee, WI}{}{
+Worked with an accelerated startup.
+Implemented an administrative panel for organization and employee management.
+Conversion of raw PHP templates into hierarchal and reusable components using the Twig template engine.
+Preparatory work for migrating raw SQL queries into a separate model layer using the Doctrine2 SQL ORM.
+}
 
-\noindent {{\bf Freelance Software Developer}\hfill (2011)} \\ {\it \href{http://www.zoomshift.com/}{ZoomShift} and EMM Holdings, LLC.}\hfill Milwaukee, WI
-
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[\smaller Technologies:] {\small PHP, SQL (MySQL), \href{http://twig.sensiolabs.org/}{Twig}, \href{http://www.doctrine-project.org/}{Doctrine2}, HTML, CSS, Javascript, jQuery, Git}
-	
-	\end{spacing}
-\end{description}
-
-\vspace{-.25cm}
-
-\noindent        Worked with an accelerated startup
-{\large $\cdot$} Implemented an administrative panel for organization and employee management
-{\large $\cdot$} Conversion of raw PHP templates into hierarchal and reusable components using the Twig template engine
-{\large $\cdot$} Preparatory work for migrating raw SQL queries into a separate model layer using the Doctrine2 SQL ORM.
-
-\bigskip
+\cvline{}{Technologies used: PHP, SQL (MySQL), \href{http://twig.sensiolabs.org/}{Twig}, \href{http://www.doctrine-project.org/}{Doctrine2}, HTML, CSS, Javascript, jQuery, Git\medskip}
 
 %%
 %% Teaching Experience
 %%
 
-\marginhead{{\vskip -1.15em}\hfill Teaching}
+\subsection{Teaching History}
 
-%% Teaching Assistantship
-
-\noindent {{\bf Teaching Assistant} for {\href{http://www.cs.uwm.edu/classes/cs201/semester/index.html}{CS-201: Computer Programming}}\hfill (2011-present)} \\ {\it University of Wisconsin-Milwaukee}\hfill Milwaukee, WI
-
-\begin{description}
-	\setlength{\itemsep}{2pt}\small\begin{spacing}{1}
-	
-	\item[\smaller Technologies:] {\small Java, \TeX/\LaTeX}
-	
-	\end{spacing}
-\end{description}
-
-\vspace{-.25cm}
-
-\noindent        Conducted two laboratory sections per semester, about 20 students each
-{\large $\cdot$} Evaluated and maintained grades for student homework, quizzes, and exams
-{\large $\cdot$} Prepared and presented new programming concepts and techniques.
+\cventry{2011-2012}{Teaching Assistant}{University of Wisconsin-Milwaukee}{Milwaukee, WI}{}{
+Prepared and presented new programming concepts and techniques.
+Conducted two laboratory sections for for {\href{http://www.cs.uwm.edu/classes/cs201/semester/index.html}{CS201 - Computer Programming}} per semester.
+Evaluated and maintained grades for student homework, quizzes, and exams.
+}
 
 \end{document}
