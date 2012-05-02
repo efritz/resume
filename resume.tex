@@ -1,0 +1,112 @@
+%% ------------------------------------------------------------------------
+%% A template to produce a nice-looking resume.
+%%
+%% Copyright 2012 Eric Fritz (eric@eric-fritz.com).
+%% ------------------------------------------------------------------------
+
+\documentclass[]{fritz-resume}
+
+%% ------------------------------------------------------------------------
+%% Resume
+%% ------------------------------------------------------------------------
+
+\begin{document}
+
+\header{eric}{fritz}{software developer}
+
+%%
+%% About
+%%
+
+\begin{aside}
+	\section{about}
+		829 E. Knapp St. \#36
+		Milwaukee, WI 53202
+		~
+		(608) 774-1120
+		\href{mailto:eric@eric-fritz.com?subject=resume}{eric@eric-fritz.com}
+		\href{http://eric-fritz.com}{http://eric-fritz.com}
+		~
+		\includegraphics[height=12pt]{github.eps}~\href{http://github.com/efritz}{efritz}
+		\includegraphics[height=12pt]{twitter.eps}~\href{http://twitter.com/ericfritz}{@ericfritz}
+\end{aside}
+
+%%
+%% Interests
+%%
+
+\section{interests}
+
+{\small Programmer who is passionate about software seeks a position as a developer, overcoming challenging problems with creative solutions.}
+
+%%
+%% Skills
+%%
+
+\section{skills}
+
+{\small PHP, C\#, Java, Python, C, C++, SQL, LINQ, Javascript, ASP.NET, ASP.NET MVC3, jQuery, HTML, CSS, AJAX, MySQL, MsSQL, SQLite, Redis, MongoDB, Windows, OSX, Ubuntu, Debian, \LaTeX{}, Apache, Git, Subversion, Eclipse, Microsoft Visual Studio}
+
+%%
+%% Education
+%%
+
+\section{education}
+
+\begin{entrylist}
+	%% MS Computer Science
+	\entry
+		{2011 - 2013}
+		{MS Computer Science}
+		{University of Wisconsin - Milwaukee}
+		{
+			\bulletpoint{GPA}{4.0/4.0} \\
+			\bulletpoint{Capstone}{\it Optimizing Distance Cache for RedPrairie Plan Optimizer}
+		}
+	
+	%% BFA Film
+	\entry
+		{2007 - 2011}
+		{BFA Film, Computer Science Minor}
+		{University of Wisconsin - Milwaukee}
+		{
+			\bulletpoint{GPA}{3.593/4.0} \\
+			\bulletpoint{Honors}{Cum Laude, Dean's Honor List, Senior Honors}
+		}
+\end{entrylist}
+
+%%
+%% Career History
+%%
+
+\section{experience}
+
+\begin{entrylist}
+	\entry
+		{2008 - 2009 \\ 2011}
+		{Software Developer}
+		{ESDN, Inc. - Janesville, WI}
+		{
+			\bulletpoint{Technologies Used}{C\#, Java, SQL, MySQL, MsSQL, ASP.NET MVC3, LINQ to SQL, HTML, CSS, Javascript, jQuery, Subversion} \\ \\
+			Developed and maintained a customizable e-commerce platform for hundreds of jewelry retailers and brands. Designed and implemented an application that managed `collections' of jewelry products between brands. Redesigned and implemented a locations management application which provided highly-demanded features and a better UX than its predecessor.
+		}
+	
+	\entry
+		{2011}
+		{Software Developer (Freelance)}
+		{EMM Holdings, LLC. - Milwaukee, WI}
+		{
+			\bulletpoint{Technologies Used}{PHP, SQL, MySQL, Twig, Doctrine2, HTML, CSS, Javascript, jQuery, Git} \\ \\
+			Worked with an accelerated startup. Implemented an administrative panel for organization and employee management. Conversion of raw PHP templates into hierarchal and reusable components using the Twig template engine. Preparatory work for migrating raw SQL queries into a separate model layer using the Doctrine2 SQL ORM.
+		}
+	
+	\entry
+		{2011 - 2012}
+		{Teaching Assistant}
+		{University of Wisconsin-Milwaukee - Milwaukee, WI}
+		{
+			Prepared and presented new programming concepts and techniques. Conducted two laboratory sections for for CS201 - Computer Programming per semester. Evaluated and maintained grades for student homework, quizzes, and exams.
+		}
+\end{entrylist}
+
+\end{document}

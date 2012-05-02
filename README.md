@@ -1,20 +1,15 @@
 # Resume
 
-This is my resume in LaTeX.  Feel free to modify the .tex file to create your own resume.  Please do not distribute these documents without my permission.
+This is my resume in LaTeX. Feel free to modify the .tex file to create your own resume. Please do not distribute these documents without my permission.
 
-# Installation and Compilation
+Requires XeTeX and fontspec to use Helvetica Neue.
 
-Install Latex and download the moderncv theme. Place the moderncv theme somewhere Latex can find it - you can just place it in the same directory as your `.tex` file:
+# License
 
-    /my-resume
-        my-resume.tex
-        my-resume.pdf
-        /moderncv
+Copyright (C) 2012, Eric Fritz
 
-Simply use the `pdflatex` command in your terminal:
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
-    pdflatex my-resume.tex
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
 
-# Credits
-
-The moderncv theme for my resume is contributed by Xavier Danaux and can be downloaded here: [moderncv](http://tug.ctan.org/tex-archive/macros/latex/contrib/moderncv/).
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
