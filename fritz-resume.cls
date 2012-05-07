@@ -20,7 +20,7 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[absolute, overlay]{textpos}
 \RequirePackage[math-style=TeX, vargreek-shape=unicode]{unicode-math}
-\RequirePackage[left=6.1cm, top=2cm, right=1.5cm, bottom=2.5cm, nohead, nofoot]{geometry}
+\RequirePackage[left=6.1cm, top=2cm, right=1.5cm, bottom=2.25cm, nohead, nofoot]{geometry}
 
 %%
 %% Colors and Fonts
@@ -48,6 +48,11 @@
 	\par\vspace{\parskip}
 	{\LARGE\headingfont\color{gray} #1}
 	\par\vspace{\parskip}
+}
+
+
+\renewcommand{\subsection}[1]{
+	{\Large\headingfont\color{lightgray} #1}
 }
 
 %%
