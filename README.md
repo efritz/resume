@@ -1,10 +1,12 @@
-# Resume
+Resume
+======
 
 This is my resume in LaTeX. Feel free to modify the .tex file to create your own resume. Please do not distribute these documents without my permission.
 
 Requires XeTeX and fontspec to use Helvetica Neue.
 
-# License
+License
+=======
 
 Copyright (C) 2012, Eric Fritz
 
