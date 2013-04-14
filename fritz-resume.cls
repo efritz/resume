@@ -1,6 +1,4 @@
 %% ------------------------------------------------------------------------
-%% A resume class to produce a nice-looking resume.
-%%
 %% Copyright 2012 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
@@ -10,7 +8,6 @@
 
 %%
 %% Required packages
-%%
 
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
@@ -24,7 +21,6 @@
 
 %%
 %% Colors and Fonts
-%%
 
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{white}{HTML}{FFFFFF}
@@ -40,88 +36,84 @@
 
 %%
 %% Page Setup
-%%
 
 \pagestyle{empty}
 
 \renewcommand{\section}[1]{
-	\par\vspace{\parskip}
-	{\LARGE\headingfont\color{gray} #1}
-	\par\vspace{\parskip}
+  \par\vspace{\parskip}
+  {\LARGE\headingfont\color{gray} #1}
+  \par\vspace{\parskip}
 }
 
 
 \renewcommand{\subsection}[1]{
-	{\Large\headingfont\color{lightgray} #1}
+  {\Large\headingfont\color{lightgray} #1}
 }
 
 %%
 %% Lists
-%%
 
 \setlength{\tabcolsep}{0pt}
 
 \newenvironment{entrylist}{
-	\begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} rl}
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} rl}
 }{
-	\end{tabular*}
+  \end{tabular*}
 }
 
 \newcommand{\multilinecell}[2][c]{
-	\begin{tabular}[#1]{@{}r@{}}
-		#2
-	\end{tabular}
+  \begin{tabular}[#1]{@{}r@{}}
+    #2
+  \end{tabular}
 }
 
 \newcommand{\entry}[4]{
-	\multilinecell[t]{#1} & \parbox[t]{11.8cm}{
-		\textbf{#2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\{\small #4}
-		\vspace{\parsep}
-	} \\
+  \multilinecell[t]{#1} & \parbox[t]{11.8cm}{
+    \textbf{#2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\{\small #4}
+    \vspace{\parsep}
+  } \\
 }
 
 \newcommand{\bulletpoint}[2]{\emph{#1:} #2}
 
 %%
 %% Header
-%%
 
 \newcommand{\header}[4]{
-	\begin{tikzpicture}[remember picture, overlay]
-		\node[rectangle, fill=orange, anchor=north, minimum width=\paperwidth, minimum height=3.25cm] (box) at (current page.north){};
+  \begin{tikzpicture}[remember picture, overlay]
+    \node[rectangle, fill=orange, anchor=north, minimum width=\paperwidth, minimum height=3.25cm] (box) at (current page.north){};
 
-		\node[anchor=center] (name) at (box) {
-			\fontsize{40pt}{72pt}\color{white}{\thinfont #1}{\bodyfont #2}
-		};
+    \node[anchor=center] (name) at (box) {
+      \fontsize{40pt}{72pt}\color{white}{\thinfont #1}{\bodyfont #2}
+    };
 
-		\node[anchor=north] at (name.south) {
-			\fontsize{14pt}{24pt}\color{white}{\thinfont #3}
-		};
-	\end{tikzpicture}
-	\vspace{1.25cm}
+    \node[anchor=north] at (name.south) {
+      \fontsize{14pt}{24pt}\color{white}{\thinfont #3}
+    };
+  \end{tikzpicture}
+  \vspace{1.25cm}
 }
 
 %%
 %% Aside
-%%
 
 \setlength{\TPVertModule}{1cm}
 \setlength{\TPHorizModule}{1cm}
 
 \newcommand{\smlsection}[1]{
-	\par\vspace{\baselineskip}
-	{\LARGE\headingfont\color{gray} #1}
+  \par\vspace{\baselineskip}
+  {\LARGE\headingfont\color{gray} #1}
 }
 
 \newenvironment{aside}{
-	\let\oldsection\section
-	\let\section\smlsection
-	\begin{textblock}{3.6}(1.5, 3.4)
-	\begin{flushright}
-	\obeycr
+  \let\oldsection\section
+  \let\section\smlsection
+  \begin{textblock}{3.6}(1.5, 3.4)
+  \begin{flushright}
+  \obeycr
 }{
-	\restorecr
-	\end{flushright}
-	\end{textblock}
-	\let\section\oldsection
+  \restorecr
+  \end{flushright}
+  \end{textblock}
+  \let\section\oldsection
 }
