@@ -27,12 +27,12 @@
 \definecolor{orange}{HTML}{FDA333}
 \definecolor{lightgray}{HTML}{999999}
 
-\newfontfamily\bodyfont[]{Helvetica Neue}
-\newfontfamily\thinfont[]{Helvetica Neue UltraLight}
-\newfontfamily\headingfont[]{Helvetica Neue Condensed Bold}
+\newfontfamily\bodyfont[Path=fonts/]{OpenSans-Regular.ttf}
+\newfontfamily\thinfont[Path=fonts/]{OpenSans-Light.ttf}
+\newfontfamily\headingfont[Path=fonts/]{OpenSans-CondBold.ttf}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=gray]{Helvetica Neue Light}
+\setmainfont[Mapping=tex-text, Color=gray, Path=fonts/]{OpenSans-Light.ttf}
 
 %%
 %% Page Setup
