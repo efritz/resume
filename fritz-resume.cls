@@ -17,7 +17,7 @@
 \RequirePackage[quiet]{fontspec}
 \RequirePackage[absolute, overlay]{textpos}
 \RequirePackage[math-style=TeX, vargreek-shape=unicode]{unicode-math}
-\RequirePackage[left=6.1cm, top=2cm, right=1.5cm, bottom=2.25cm, nohead, nofoot]{geometry}
+\RequirePackage[left=4.6cm, top=2cm, right=1.5cm, bottom=2.25cm, nohead, nofoot]{geometry}
 
 %%
 %% Colors and Fonts
@@ -27,12 +27,18 @@
 \definecolor{orange}{HTML}{FDA333}
 \definecolor{lightgray}{HTML}{999999}
 
-\newfontfamily\bodyfont[Path=fonts/]{OpenSans-Regular.ttf}
-\newfontfamily\thinfont[Path=fonts/]{OpenSans-Light.ttf}
-\newfontfamily\headingfont[Path=fonts/]{OpenSans-CondBold.ttf}
+\newfontfamily\bodyfont[Path=open-sans/]{OpenSans-Regular.ttf}
+\newfontfamily\thinfont[Path=open-sans/]{OpenSans-Light.ttf}
+\newfontfamily\headingfont[Path=open-sans/]{OpenSans-Bold.ttf}
 
 \defaultfontfeatures{Mapping=tex-text}
-\setmainfont[Mapping=tex-text, Color=gray, Path=fonts/]{OpenSans-Light.ttf}
+\setmainfont[
+  Mapping=tex-text,
+  Color=gray,
+  Path=open-sans/,
+  BoldFont={OpenSans-Bold.ttf}, 
+  ItalicFont={OpenSans-LightItalic.ttf},
+]{OpenSans-Light.ttf}
 
 %%
 %% Page Setup
@@ -44,7 +50,6 @@
   {\LARGE\headingfont\color{gray} #1}
   \par\vspace{\parskip}
 }
-
 
 \renewcommand{\subsection}[1]{
   {\Large\headingfont\color{lightgray} #1}
@@ -68,8 +73,8 @@
 }
 
 \newcommand{\entry}[4]{
-  \multilinecell[t]{#1} & \parbox[t]{11.8cm}{
-    \textbf{#2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\{\small #4}
+  \multilinecell[t]{#1} & \parbox[t]{13cm}{
+    \textbf{\addfontfeature{Color=gray} #2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\{\small #4}
     \vspace{\parsep}
   } \\
 }
@@ -81,17 +86,17 @@
 
 \newcommand{\header}[4]{
   \begin{tikzpicture}[remember picture, overlay]
-    \node[rectangle, fill=orange, anchor=north, minimum width=\paperwidth, minimum height=3.25cm] (box) at (current page.north){};
+    \node[rectangle, fill=orange, anchor=north, minimum width=\paperwidth, minimum height=1.8cm] (box) at (current page.north){};
 
     \node[anchor=center] (name) at (box) {
-      \fontsize{40pt}{72pt}\color{white}{\thinfont #1}{\bodyfont #2}
+      \fontsize{40pt}{72pt}\color{white}{\thinfont #1 #2}
     };
 
-    \node[anchor=north] at (name.south) {
-      \fontsize{14pt}{24pt}\color{white}{\thinfont #3}
+    \node[anchor=north] at (box.south) {
+      \fontsize{14pt}{24pt}\color{orange}{\bodyfont #3}
     };
   \end{tikzpicture}
-  \vspace{1.25cm}
+  \vspace{0.25cm}
 }
 
 %%
@@ -108,7 +113,7 @@
 \newenvironment{aside}{
   \let\oldsection\section
   \let\section\smlsection
-  \begin{textblock}{3.6}(1.5, 3.4)
+  \begin{textblock}{3.5}(.5, 2.39)
   \begin{flushright}
   \obeycr
 }{
