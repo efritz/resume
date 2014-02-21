@@ -1,6 +1,6 @@
 # Resume
 
-This is my resume in LaTeX. Feel free to modify the .tex file to create your own resume. XeTeX and fontspec are required to use Helvetica Neue.
+This is my resume in LaTeX. Feel free to modify the .tex file to create your own resume. XeLaTeX and fontspec are required.
 
 ## License
 
