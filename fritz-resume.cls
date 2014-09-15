@@ -10,8 +10,11 @@
 %% Required packages
 
 \RequirePackage{tikz}
+\RequirePackage{array}
+\RequirePackage{tabto}
 \RequirePackage{xcolor}
 \RequirePackage{parskip}
+\RequirePackage{minibox}
 \RequirePackage{hyperref}
 \RequirePackage[none]{hyphenat}
 \RequirePackage[quiet]{fontspec}
@@ -47,7 +50,7 @@
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
-  {\LARGE\headingfont\color{gray} #1}
+  {\LARGE\headingfont\color{orange} #1}
   \par\vspace{\parskip}
 }
 
@@ -58,13 +61,7 @@
 %%
 %% Lists
 
-\setlength{\tabcolsep}{0pt}
-
-\newenvironment{entrylist}{
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} rl}
-}{
-  \end{tabular*}
-}
+\setlength{\tabcolsep}{6pt}
 
 \newcommand{\multilinecell}[2][c]{
   \begin{tabular}[#1]{@{}r@{}}
@@ -72,11 +69,20 @@
   \end{tabular}
 }
 
+\newcommand{\pushmargin}[1]{
+  \tabto*{-4cm}
+  \begin{minipage}[t]{3.5cm}
+    \begin{flushright}
+      #1
+    \end{flushright}
+  \end{minipage}
+}
+
 \newcommand{\entry}[4]{
-  \multilinecell[t]{#1} & \parbox[t]{13cm}{
-    \textbf{\addfontfeature{Color=gray} #2}\hfill{\footnotesize\addfontfeature{Color=lightgray} #3}\\{\small #4}
-    \vspace{\parsep}
-  } \\
+  \textbf{\addfontfeature{Color=gray} #1} \pushmargin{#3}
+  \hfill {\footnotesize\addfontfeature{Color=lightgray} #2} \\
+  {\small #4}
+  \vspace{\parsep}
 }
 
 \newcommand{\bulletpoint}[2]{\emph{#1:} #2}
@@ -107,18 +113,18 @@
 
 \newcommand{\smlsection}[1]{
   \par\vspace{\baselineskip}
-  {\LARGE\headingfont\color{gray} #1}
+  {\LARGE\headingfont\color{orange} #1}
 }
 
 \newenvironment{aside}{
   \let\oldsection\section
   \let\section\smlsection
-  \begin{textblock}{3.5}(.5, 2.39)
-  \begin{flushright}
-  \obeycr
+  \begin{textblock}{3.5}(.5, 2.45)
+    \begin{flushright}
+      \obeycr
 }{
-  \restorecr
-  \end{flushright}
+      \restorecr
+    \end{flushright}
   \end{textblock}
   \let\section\oldsection
 }
