@@ -13,6 +13,7 @@
 \RequirePackage{array}
 \RequirePackage{tabto}
 \RequirePackage{xcolor}
+\RequirePackage{bbding}
 \RequirePackage{parskip}
 \RequirePackage{minibox}
 \RequirePackage{hyperref}
@@ -28,7 +29,7 @@
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{orange}{HTML}{FDA333}
-\definecolor{lightgray}{HTML}{999999}
+\definecolor{lightgray}{HTML}{888888}
 
 \newfontfamily\bodyfont[Path=open-sans/]{OpenSans-Regular.ttf}
 \newfontfamily\thinfont[Path=open-sans/]{OpenSans-Light.ttf}
@@ -39,7 +40,7 @@
   Mapping=tex-text,
   Color=gray,
   Path=open-sans/,
-  BoldFont={OpenSans-Bold.ttf}, 
+  BoldFont={OpenSans-Bold.ttf},
   ItalicFont={OpenSans-LightItalic.ttf},
 ]{OpenSans-Light.ttf}
 
@@ -79,13 +80,17 @@
 }
 
 \newcommand{\entry}[4]{
-  \textbf{\addfontfeature{Color=gray} #1} \pushmargin{#3}
-  \hfill {\footnotesize\addfontfeature{Color=lightgray} #2} \\
+  \textbf{#1}\pushmargin{#3}
+  \hfill {\footnotesize #2} \\
   {\small #4}
   \vspace{\parsep}
 }
 
 \newcommand{\bulletpoint}[2]{\emph{#1:} #2}
+
+\newcommand{\tech}[1]{
+  \hfill {\footnotesize\addfontfeature{Color=lightgray} #1} \\
+}
 
 %%
 %% Header
