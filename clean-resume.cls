@@ -2,7 +2,7 @@
 %% Copyright 2012 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
-\ProvidesClass{fritz-resume}[2012/04/30 resume class]
+\ProvidesClass{clean-resume}[2012/04/30 resume class]
 
 \LoadClass{article}
 
@@ -26,10 +26,10 @@
 %%
 %% Colors and Fonts
 
-\definecolor{gray}{HTML}{4D4D4D}
 \definecolor{white}{HTML}{FFFFFF}
-\definecolor{orange}{HTML}{FDA333}
+\definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{888888}
+\definecolor{header}{HTML}{FDA333}
 
 \newfontfamily\bodyfont[Path=open-sans/]{OpenSans-Regular.ttf}
 \newfontfamily\thinfont[Path=open-sans/]{OpenSans-Light.ttf}
@@ -51,7 +51,7 @@
 
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
-  {\LARGE\headingfont\color{orange} #1}
+  {\LARGE\headingfont\color{header} #1}
   \par\vspace{\parskip}
 }
 
@@ -97,14 +97,14 @@
 
 \newcommand{\header}[4]{
   \begin{tikzpicture}[remember picture, overlay]
-    \node[rectangle, fill=orange, anchor=north, minimum width=\paperwidth, minimum height=1.8cm] (box) at (current page.north){};
+    \node[rectangle, fill=header, anchor=north, minimum width=\paperwidth, minimum height=1.8cm] (box) at (current page.north){};
 
     \node[anchor=center] (name) at (box) {
       \fontsize{40pt}{72pt}\color{white}{\thinfont #1 #2}
     };
 
     \node[anchor=north] at (box.south) {
-      \fontsize{14pt}{24pt}\color{orange}{\bodyfont #3}
+      \fontsize{14pt}{24pt}\color{header}{\bodyfont #3}
     };
   \end{tikzpicture}
   \vspace{0.25cm}
@@ -118,7 +118,7 @@
 
 \newcommand{\smlsection}[1]{
   \par\vspace{\baselineskip}
-  {\LARGE\headingfont\color{orange} #1}
+  {\LARGE\headingfont\color{header} #1}
 }
 
 \newenvironment{aside}{
