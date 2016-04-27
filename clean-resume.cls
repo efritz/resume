@@ -1,30 +1,51 @@
 %% ------------------------------------------------------------------------
-%% Copyright 2012 Eric Fritz (eric@eric-fritz.com).
+%% Copyright 2016 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
-\ProvidesClass{clean-resume}[2012/04/30 resume class]
+\ProvidesClass{clean-resume}[2016/04/26 resume class]
 
 \LoadClass{article}
 
-%%
-%% Required packages
+%
+% Spacing Definitions
+
+\newcommand{\guttersize}{4cm}
+\newcommand{\gutterpadding}{.5cm}
+\newcommand{\headerheight}{2.25cm}
+
+%
+% Derived Spacing
+
+\newcommand{\ledge}{\dimexpr-\guttersize+\gutterpadding}
+\newcommand{\gsize}{\dimexpr\guttersize-\gutterpadding*2}
+\newcommand{\msize}{\dimexpr\paperwidth-\gutterpadding*2}
+
+%
+% Imports
 
 \RequirePackage{tikz}
-\RequirePackage{array}
 \RequirePackage{tabto}
-\RequirePackage{xcolor}
+\RequirePackage{array}
 \RequirePackage{bbding}
+\RequirePackage{ifthen}
+\RequirePackage{xcolor}
 \RequirePackage{parskip}
-\RequirePackage{minibox}
 \RequirePackage{hyperref}
-\RequirePackage[none]{hyphenat}
+\RequirePackage{enumitem}
 \RequirePackage[quiet]{fontspec}
-\RequirePackage[absolute, overlay]{textpos}
 \RequirePackage[math-style=TeX, vargreek-shape=unicode]{unicode-math}
-\RequirePackage[left=4.6cm, top=2cm, right=1.5cm, bottom=2.25cm, nohead, nofoot]{geometry}
 
-%%
-%% Colors and Fonts
+\RequirePackage[
+  left=\guttersize,
+  right=1.5cm,
+  top=\headerheight,
+  bottom=2cm,
+  nohead,
+  nofoot,
+]{geometry}
+
+%
+% Colors and Fonts
 
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{gray}{HTML}{4D4D4D}
@@ -42,10 +63,16 @@
   Path=open-sans/,
   BoldFont={OpenSans-Bold.ttf},
   ItalicFont={OpenSans-LightItalic.ttf},
-]{OpenSans-Light.ttf}
+]{OpenSans-Regular.ttf}
 
-%%
-%% Page Setup
+%
+% Header Font Sizes
+\newcommand{\asize}{40pt}
+\newcommand{\bsize}{16pt}
+\newcommand{\csize}{9pt}
+
+%
+% Basic Layout Overrides
 
 \pagestyle{empty}
 
@@ -55,81 +82,63 @@
   \par\vspace{\parskip}
 }
 
-\renewcommand{\subsection}[1]{
-  {\Large\headingfont\color{lightgray} #1}
+%
+% Header
+
+\newcommand{\headertext}[3]{
+  \fontsize{#2}{#2}\color{#3}{\thinfont #1}
 }
 
-%%
-%% Lists
+\newcommand{\header}[3]{
+  \begin{tikzpicture}[remember picture, overlay]
+    \tikzset{every node/.style={
+      minimum width=\paperwidth
+    }}
 
-\setlength{\tabcolsep}{6pt}
+    \node[
+      rectangle,
+      fill=header,
+      anchor=north,
+      minimum height=\headerheight,
+    ] (box) at (current page.north) {};
 
-\newcommand{\multilinecell}[2][c]{
-  \begin{tabular}[#1]{@{}r@{}}
-    #2
-  \end{tabular}
+    \node[anchor=north] (a) at (box.north) { \headertext{#1}{\asize}{white}  };
+    \node[anchor=north] (b) at (box.south) { \headertext{#2}{\bsize}{header} };
+    \node[anchor=south] (c) at (box.south) { \headertext{#3}{\csize}{white}  };
+  \end{tikzpicture}
 }
 
-\newcommand{\pushmargin}[1]{
-  \tabto*{-4cm}
-  \begin{minipage}[t]{3.5cm}
+%
+% Content Commands
+
+\newcommand{\entry}[5]{
+  \textbf{#1} \gutter{\thinfont #3} \hfill \soft{#4} \\
+  \ifthenelse{\equal{#2}{}}{}{
+    {\thinfont\small #2} \\
+  }
+  #5
+}
+
+\newcommand{\shortentry}[3]{
+  #1 \gutter{\thinfont #3} \hfill \soft{#2}
+}
+
+\newcommand{\task}[1]{
+  $\diamond$ #1 \\
+}
+
+\newcommand{\soft}[1]{
+  {\footnotesize\addfontfeature{Color=lightgray} #1}
+}
+
+%
+% Internal Commands
+
+\newcommand{\gutter}[1]{
+  \tabto*{\ledge}
+  \begin{minipage}[t][\parskip][t]{\gsize}
     \begin{flushright}
       #1
     \end{flushright}
   \end{minipage}
-}
-
-\newcommand{\entry}[4]{
-  \textbf{#1}\pushmargin{#3}
-  \hfill {\footnotesize #2} \\
-  {\small #4}
-  \vspace{\parsep}
-}
-
-\newcommand{\bulletpoint}[2]{\emph{#1:} #2}
-
-\newcommand{\tech}[1]{
-  \hfill {\footnotesize\addfontfeature{Color=lightgray} #1} \\
-}
-
-%%
-%% Header
-
-\newcommand{\header}[4]{
-  \begin{tikzpicture}[remember picture, overlay]
-    \node[rectangle, fill=header, anchor=north, minimum width=\paperwidth, minimum height=1.8cm] (box) at (current page.north){};
-
-    \node[anchor=center] (name) at (box) {
-      \fontsize{40pt}{72pt}\color{white}{\thinfont #1 #2}
-    };
-
-    \node[anchor=north] at (box.south) {
-      \fontsize{14pt}{24pt}\color{header}{\bodyfont #3}
-    };
-  \end{tikzpicture}
-  \vspace{0.25cm}
-}
-
-%%
-%% Aside
-
-\setlength{\TPVertModule}{1cm}
-\setlength{\TPHorizModule}{1cm}
-
-\newcommand{\smlsection}[1]{
-  \par\vspace{\baselineskip}
-  {\LARGE\headingfont\color{header} #1}
-}
-
-\newenvironment{aside}{
-  \let\oldsection\section
-  \let\section\smlsection
-  \begin{textblock}{3.5}(.5, 2.45)
-    \begin{flushright}
-      \obeycr
-}{
-      \restorecr
-    \end{flushright}
-  \end{textblock}
-  \let\section\oldsection
 }

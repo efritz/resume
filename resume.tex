@@ -1,181 +1,108 @@
 %% ------------------------------------------------------------------------
-%% Copyright 2012 Eric Fritz (eric@eric-fritz.com).
+%% Copyright 2016 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
 \documentclass[]{clean-resume}
 
-%% ------------------------------------------------------------------------
-%% Resume
-%% ------------------------------------------------------------------------
-
 \begin{document}
 
-\header{eric}{fritz}{software developer}
+\newcommand{\address}{829 E. Knapp St. \#36 Milwaukee, WI 53202}
+\newcommand{\phone}{(608) 774-1120}
+\newcommand{\email}{\href{mailto:eric@eric-fritz.com?subject=Resume}{eric@eric-fritz.com}}
+\newcommand{\website}{\href{http://eric-fritz.com}{eric-fritz.com}}
 
-%%
-%% Contact
-
-\begin{aside}
-  \section{contact}
-    829 E. Knapp St. \#36
-    Milwaukee, WI 53202
-    ~
-    (608) 774-1120
-    \href{mailto:eric@eric-fritz.com?subject=Resume}{eric@eric-fritz.com}
-    \href{http://eric-fritz.com}{http://eric-fritz.com}
-\end{aside}
-
-%%
-%% Skills
-
-\section{interests \& languages}
-
-\vspace{.25cm}
-
-\begin{centering}
-{ \small
-  Construction of (Optimizing) Compilers $\cdot$
-  Algorithms \& Data Structures $\cdot$
-  Concurrent \& Distributed Systems
-}
-%
-{ \small
-  Scala $\cdot$
-  Java $\cdot$
-  Python $\cdot$
-  Go $\cdot$
-  Rust $\cdot$
-  Javascript $\cdot$
-  Swift $\cdot$
-  C\# $\cdot$
-  \LaTeX{}
-}
-
-\end{centering}
-
-\vspace{.25cm}
-
-%%
-%% Education
+\header{eric fritz}{software developer}{\phone $~\cdot~$ \email $~\cdot~$ \website}
 
 \section{education}
 
-% PhD Computer Science
 \entry
   {PhD Computer Science}
   {University of Wisconsin - Milwaukee}
   {2014 - Now}
+  {Milwaukee, WI}
   {
-    \begin{tabular}{>{\raggedleft}p{1.7cm} l}
-      %GPA      & 4.0 \\
-      %Advisor  & Dr. John Boyland \\
-      Research &
-        \begin{minipage}[t]{0.85\columnwidth}
-          \emph{`Never-Stale Intermediate Representations amidst Optimizing Transformations'} \\
-          Developing a set of algorithms which can reconstruct (locally) particular invariants of an optimizing compiler's intermediate representation after an optimization pass mutates the program's control flow graph.
-          %
-          \tech{(Currently In-Progress)}
-        \end{minipage} \\
-      Awards   & CEAS Dean's Scholarship, Spring 2014 \\
-    \end{tabular}
+    % Research
+    \task{\emph{`Never-Stale Intermediate Representations amidst Optimizing Transformations'}: Developing a set of algorithms which can reconstruct (locally) particular invariants of an optimizing compiler's intermediate representation after an optimization pass mutates the program's control flow graph.}
+    %
+    % Awards
+    \task{CEAS Dean's Scholarship \gutter{\soft{Spring 2014}}}
   }
 
-% MS Computer Science
 \entry
   {MS Computer Science}
   {University of Wisconsin - Milwaukee}
   {2011 - 2013}
+  {Milwaukee, WI}
   {
-    \begin{tabular}{>{\raggedleft}p{1.7cm} l}
-      %GPA      & 3.970 \\
-      %Advisor  & Dr. Christine Cheng \\
-      Research &
-        \begin{minipage}[t]{0.85\columnwidth}
-          \emph{`Optimizing the RedPrairie Distance Cache'} \\
-          Designed and implemented a cache for RedPrairie (now JDA)'s Vehicular Routing Problem solver given hard runtime and space constraints. The caching strategy showed a marked improvement in the solver's throughput.
-          %
-          \tech{}
-        \end{minipage} \\
-      Awards   & Chancellor's Graduate Student Awards (CGSA), Spring 2013 \\
-               & CEAS Dean's Scholarship, Fall 2013
-    \end{tabular}
+    % Research
+    \task{\emph{`Optimizing the RedPrairie Distance Cache'}: Designed and implemented a cache for RedPrairie (now JDA)'s Vehicular Routing Problem solver given hard runtime and space constraints. The caching strategy showed a marked improvement in the solver's throughput.}
+    %
+    % Awards
+    \task{Chancellor's Graduate Student Awards (CGSA) \gutter{\soft{Spring 2013}}}
+    \task{CEAS Dean's Scholarship \gutter{\soft{Fall 2013}}}
   }
-
-% BFA Film
-\entry
-  {BFA Film, Computer Science Minor}
-  {University of Wisconsin - Milwaukee}
-  {2007 - 2011}
-  {
-    \begin{tabular}{>{\raggedleft}p{1.7cm} l}
-      %GPA    & 3.593 \\
-      Awards & Cum Laude, Dean's Honor List, Senior Honors
-    \end{tabular}
-  }
-
-%%
-%% Publications
-
-\section{refereed publications}
-
-\entry
-  {Type Inference of Asynchronous Arrows in JavaScript}
-  {REBLS 2015 Co-Located with SPLASH}
-  {2015}
-  {Paper and presentation slides available at \href{http://arrows.eric-fritz.com}{http://arrows.eric-fritz.com}.}
-
-%%
-%% Experience
 
 \section{career history}
 
-% Corvisa
 \entry
-  {Software Developer}
-  {ShoreTel (Corvisa LLC) - Milwaukee, WI}
+  {ShoreTel / Corvisa LLC.}
+  {}
   {2015 - Now}
+  {Milwaukee, WI}
   {
-    Designed and implemented a multi-datacenter resource tracking/limiting service to increase Corvisa's PaaS reliability and uptime. Enabled transparent horizontal scaling of (dumb) SIP switches, increasing the maximum active call capacity for large clients.
+    % Charon
+    % Apollo
+    % Recognize
+    % Determine
     %
-    \tech{Go, Python, Lua, Postgresql, Redis, Zookeeper, Riemann}
+    Designed and implemented a multi-datacenter resource tracking/limiting service to increase Corvisa's PaaS reliability and uptime. Enabled transparent horizontal scaling of (dumb) SIP switches, increasing the maximum active call capacity for large clients.
   }
 
-% ESDN
 \entry
-  {Software Developer}
-  {ESDN, Inc. - Janesville, WI \vspace{-3mm}}
+  {ESDN, Inc.}
+  {}
   {2008 - 2009 \\ 2011}
+  {Janesville, WI }
   {
     Developed and maintained a platform aiming to streamline e-commerce operations for hundreds of jewelry retailers and brands. Designed and implemented an jewelry collection management product, and a retail locations management application; both highly-demanded by clients.
-    %
-    \tech{C\#, ASP.NET MVC, Java, MsSQL}
   }
 
-% EMM
 \entry
-  {Software Developer (Freelance / Contract Position)}
-  {EMM Holdings, LLC. - Milwaukee, WI}
+  {EMM Holdings, LLC.}
+  {Software Developer (Contract)}
   {2011}
+  {Milwaukee, WI}
   {
     Developed and maintained an application which managed employee scheduling for an accelerated startup. Improved testing and maintenance qualities of flagship application by introducing dedicated business logic and view application layers.
-    %
-    \tech{PHP, MySQL, HTML5, CSS3}
   }
 
-%%
-%% Teaching
+\section{publications}
 
-\pagebreak
+\shortentry
+  {Charon: The Design of a Limiting Microservice}
+  {Whitepaper, ShoreTel}
+  {2016}
+
+\shortentry
+  {Typing and Semantics of Asynchronous Arrows in JavaScript}
+  {Science of Computer Programming}
+  {2016}
+
+\shortentry
+  {Inferring Types for Asynchronous Arrows in JavaScript}
+  {REBLS'15}
+  {2015}
 
 \section{teaching history}
 
 \entry
-  {Teaching Assistant}
   {University of Wisconsin - Milwaukee}
+  {}
   {2011 - 2016}
+  {Milwaukee, WI}
   {
     Designed the syllabus, course structure, and focus for CS658, CS481, and CS481. Prepared assignment, quiz, exam, lecture, and lab activity for the following courses fresh each semester. Evaluated hundreds of students over eleven semesters. \vspace{.25cm}
-    
+
     \begin{tabular}{l c l | c | c | c}
       \hline
       \textbf{CS658} &-& Mobile Application Develompent Under iOS            & \Checkmark & \Checkmark &   \\
@@ -184,11 +111,11 @@
       \textbf{CS655} &-& Compiler Implementation Laboratory                  &   & \Checkmark & \Checkmark \\
       \textbf{CS251} &-& Intermediate Computer Programming                   &   & \Checkmark & \Checkmark \\
       \textbf{CS744} &-& Text Retrieval and Its Applications in Biomedicine  &   &   & \Checkmark \\
-      \textbf{CS395} &-& Social, Professional, Ethical Issues                &   &   & \Checkmark \\  
+      \textbf{CS395} &-& Social, Professional, Ethical Issues                &   &   & \Checkmark \\
       \textbf{CS361} &-& Introduction to Software Engineering                &   &   & \Checkmark \\
       \textbf{CS351} &-& Data Structures and Algorithms                      &   &   & \Checkmark \\
       \textbf{CS315} &-& Assembly Language Programming                       &   &   & \Checkmark \\
-      \textbf{CS201} &-& Introduction to Computer Programming                &   &   & \Checkmark \\  
+      \textbf{CS201} &-& Introduction to Computer Programming                &   &   & \Checkmark \\
       \textbf{CS150} &-& Survey of Computer Science                          &   &   & \Checkmark \\\hline
                      & & & \textbf{Designed} & \textbf{Instructed} & \textbf{Assisted} \\
     \end{tabular}
