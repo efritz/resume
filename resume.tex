@@ -11,21 +11,59 @@
 \newcommand{\email}{\href{mailto:eric@eric-fritz.com?subject=Resume}{eric@eric-fritz.com}}
 \newcommand{\website}{\href{http://eric-fritz.com}{eric-fritz.com}}
 
-\header{eric fritz}{software developer}{\phone $~\cdot~$ \email $~\cdot~$ \website}
+\header{eric fritz}{software engineer}{\phone $~\cdot~$ \email $~\cdot~$ \website}
+
+\section{technologies}
+
+Go $\cdot$
+Python $\cdot$
+Rust $\cdot$
+Scala $\cdot$
+Java $\cdot$
+SQL \\
+%
+Redis (Scripting and Modules) $\cdot$
+RabbitMQ $\cdot$
+Cassandra $\cdot$
+ZooKeeper $\cdot$
+Consul \\
+%
+Docker $\cdot$
+Mesos $\cdot$
+Marathon $\cdot$
+S3 $\cdot$
+Git $\cdot$
+Bamboo
+
+\section{work history}
+
+\entry
+  {ShoreTel, Formerly Corvisa LLC.}
+  {}
+  {2015 - Now}
+  {Milwaukee, WI}
+  {
+    Developed \emph{Summit} and the surrounding infrastructure for ShoreTel's communications platform as a service. The platform allows users to build voice and SMS applications with Lua code that runs in containerized sandboxes. My primary contributions include solutions for container scheduling, rate and process limiting applied per-client, cross-datacenter storage, voice recognition, and real-time audio mixing and streaming.
+  }
+
+\entry
+  {ESDN, Inc.}
+  {}
+  {2008 - 2011}
+  {Janesville, WI }
+  {
+    Developed an e-commerce and supply chain web application which streamline interactions between jewelry consumers, retailers, and suppliers. My primary contributions include a consumer-facing jewelry collection showcase and a retail (brick-and-mortar) location management system. Primary tehcnologies include ASP.NET MVC using C\# and MSSQL. 
+  }
 
 \section{education}
 
 \entry
   {PhD Computer Science}
   {University of Wisconsin - Milwaukee}
-  {2014 - Now}
+  {2014 - 2018}
   {Milwaukee, WI}
   {
-    % Research
-    \task{\emph{`Never-Stale Intermediate Representations amidst Optimizing Transformations'}: Developing a set of algorithms which can reconstruct (locally) particular invariants of an optimizing compiler's intermediate representation after an optimization pass mutates the program's control flow graph.}
-    %
-    % Awards
-    \task{CEAS Dean's Scholarship \gutter{\soft{Spring 2014}}}
+    \emph{`Waddle: Always-Canonical Intermediate Representation'}: an optimizing compiler and a supporting set of algorithms whose internal representation never \emph{goes stale}. Local updates to internal structures reduces compilation time while yielding the same output.
   }
 
 \entry
@@ -34,46 +72,7 @@
   {2011 - 2013}
   {Milwaukee, WI}
   {
-    % Research
-    \task{\emph{`Optimizing the RedPrairie Distance Cache'}: Designed and implemented a cache for RedPrairie (now JDA)'s Vehicular Routing Problem solver given hard runtime and space constraints. The caching strategy showed a marked improvement in the solver's throughput.}
-    %
-    % Awards
-    \task{Chancellor's Graduate Student Awards (CGSA) \gutter{\soft{Spring 2013}}}
-    \task{CEAS Dean's Scholarship \gutter{\soft{Fall 2013}}}
-  }
-
-\section{career history}
-
-\entry
-  {ShoreTel / Corvisa LLC.}
-  {}
-  {2015 - Now}
-  {Milwaukee, WI}
-  {
-    % Charon
-    % Apollo
-    % Recognize
-    % Determine
-    %
-    Designed and implemented a multi-datacenter resource tracking/limiting service to increase Corvisa's PaaS reliability and uptime. Enabled transparent horizontal scaling of (dumb) SIP switches, increasing the maximum active call capacity for large clients.
-  }
-
-\entry
-  {ESDN, Inc.}
-  {}
-  {2008 - 2009 \\ 2011}
-  {Janesville, WI }
-  {
-    Developed and maintained a platform aiming to streamline e-commerce operations for hundreds of jewelry retailers and brands. Designed and implemented an jewelry collection management product, and a retail locations management application; both highly-demanded by clients.
-  }
-
-\entry
-  {EMM Holdings, LLC.}
-  {Software Developer (Contract)}
-  {2011}
-  {Milwaukee, WI}
-  {
-    Developed and maintained an application which managed employee scheduling for an accelerated startup. Improved testing and maintenance qualities of flagship application by introducing dedicated business logic and view application layers.
+    \emph{`Optimizing the RedPrairie Distance Cache'}: implemented and evaluated a number of caching solutions for RedPrairie's vehicular route solver using production query data given hard runtime and space constraints. Applying the chosen caching strategy provided a marked improvement in the solver's throughput.
   }
 
 \section{publications}
@@ -81,16 +80,21 @@
 \shortentry
   {Charon: The Design of a Limiting Microservice}
   {Whitepaper, ShoreTel}
-  {2016}
+  {2017}
 
 \shortentry
   {Typing and Semantics of Asynchronous Arrows in JavaScript}
-  {Science of Computer Programming}
+  {The Science of Computer Programming}
   {2016}
-
+  
 \shortentry
-  {Inferring Types for Asynchronous Arrows in JavaScript}
-  {REBLS'15}
+  {Arrows in Commercial Web Applications}
+  {HotWeb}
+  {2016}
+  
+\shortentry
+  {Type Inference of Asynchronous Arrows in JavaScript}
+  {Reactive and Event-based Languages \& Systems}
   {2015}
 
 \section{teaching history}
@@ -101,24 +105,7 @@
   {2011 - 2016}
   {Milwaukee, WI}
   {
-    Designed the syllabus, course structure, and focus for CS658, CS481, and CS481. Prepared assignment, quiz, exam, lecture, and lab activity for the following courses fresh each semester. Evaluated hundreds of students over eleven semesters. \vspace{.25cm}
-
-    \begin{tabular}{l c l | c | c | c}
-      \hline
-      \textbf{CS658} &-& Mobile Application Develompent Under iOS            & \Checkmark & \Checkmark &   \\
-      \textbf{CS482} &-& Rich Internet Applications                          & \Checkmark & \Checkmark &   \\
-      \textbf{CS481} &-& Server-side Internet Programming                    & \Checkmark & \Checkmark &   \\
-      \textbf{CS655} &-& Compiler Implementation Laboratory                  &   & \Checkmark & \Checkmark \\
-      \textbf{CS251} &-& Intermediate Computer Programming                   &   & \Checkmark & \Checkmark \\
-      \textbf{CS744} &-& Text Retrieval and Its Applications in Biomedicine  &   &   & \Checkmark \\
-      \textbf{CS395} &-& Social, Professional, Ethical Issues                &   &   & \Checkmark \\
-      \textbf{CS361} &-& Introduction to Software Engineering                &   &   & \Checkmark \\
-      \textbf{CS351} &-& Data Structures and Algorithms                      &   &   & \Checkmark \\
-      \textbf{CS315} &-& Assembly Language Programming                       &   &   & \Checkmark \\
-      \textbf{CS201} &-& Introduction to Computer Programming                &   &   & \Checkmark \\
-      \textbf{CS150} &-& Survey of Computer Science                          &   &   & \Checkmark \\\hline
-                     & & & \textbf{Designed} & \textbf{Instructed} & \textbf{Assisted} \\
-    \end{tabular}
+    Designer and primary instructor of a mobile application programming course using iOS, a compiler implementation laborator, intermediate programming using Java (second course of a three-part series), and a pair of courses focusing on server-side and client-side application development. Ran laboratories and graded for seven additional courses including text retrieval, data structures and algorithms, and assembly language programming (using MIPS)`.
   }
 
 \end{document}
