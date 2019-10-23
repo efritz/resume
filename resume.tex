@@ -9,46 +9,41 @@
 \newcommand{\address}{2340 N. Cramer St. Apt. 425 Milwaukee, WI 53211}
 \newcommand{\phone}{(608) 774-1120}
 \newcommand{\email}{\href{mailto:eric@eric-fritz.com?subject=Resume}{eric@eric-fritz.com}}
-\newcommand{\website}{\href{http://eric-fritz.com}{http://eric-fritz.com}}
+\newcommand{\website}{\href{https://eric-fritz.com}{https://eric-fritz.com}}
 
 \header{eric fritz}{software engineer}{\phone $~\cdot~$ \email $~\cdot~$ \website}
 
 \section{core competencies}
 
 \shortentry
-  {Go $\cdot$ Python $\cdot$ JavaScript $\cdot$ TypeScript}
+  {
+    Go $\cdot$ TypeScript $\cdot$ Python $\cdot$
+    Git $\cdot$ Docker $\cdot$
+    Postgres $\cdot$ Redis $\cdot$
+    Kafka $\cdot$ Kinesis $\cdot$ RabbitMQ \\
+    Kubernetes $\cdot$ Lambda $\cdot$ DynamoDB
+  }
   {}
-  {Languages}
-
-\shortentry
-  {Git $\cdot$ Docker $\cdot$ Localstack}
   {}
-  {Local}
-
-\shortentry
-  {Postgres $\cdot$ DynamoDB $\cdot$ Cassandra $\cdot$ Redis (writing modules)}
-  {}
-  {Databases}
-
-\shortentry
-  {RabbitMQ $\cdot$ Kinesis $\cdot$ Kafka $\cdot$ Riemann $\cdot$ Prometheus}
-  {}
-  {Technologies}
-
-\shortentry
-  {Lambda $\cdot$ Kubernetes $\cdot$ Mesos}
-  {}
-  {Orchestration}
 
 \section{work history}
 
 \entry
+  {Sourcegraph}
+  {Software Engineer on @code-intel}
+  {2019 - Now}
+  {Milwaukee, WI (Remote)}
+  {
+    I am currently exploring language servers and related offline-indexing strategies to supply fast and precise code intelligence, specifically cross-project jump-to-definition and find-reference queries, for large enterprise installations (around the scale of 100K repositories, 10M lines of code, and 1K commits per repository per day).
+  }
+
+\entry
   {Mitel}
   {Senior Software Engineer, Labs Team}
-  {2015 - Now}
+  {2015 - 2019}
   {Milwaukee, WI}
   {
-    We are currently building an IFTTT-like engine and the surrounding ecosystem to support integration of internal and external services. Previously, my team designed Mitel's IoT infrastructure and IoT Collaboration strategy and developed \emph{Summit}, a CPaaS system that allows users to build voice and SMS applications with Lua code that runs in a containerized sandbox.
+    Designed and implemented: \emph{Nighthawk}, an IFTTT-like engine and the surrounding ecosystem to support integration of internal and external services; \emph{Kestrel}, Mitel's IoT infrastructure and IoT Collaboration strategy; \emph{Summit}, a CPaaS system that allows users to build voice and SMS applications with Lua code that runs in a containerized sandbox.
   }
 
 \section{education}
@@ -77,7 +72,7 @@
   {Waddle - Always-Canonical Intermediate Representation}
   {Dissertation}
   {2018}
-  
+
 \shortentry
   {Maintaining Canonical Form After Edge Deletion}
   {ICOOOLPS}
@@ -92,12 +87,12 @@
   {Typing and Semantics of Asynchronous Arrows in JavaScript}
   {The Science of Computer Programming}
   {2017}
-  
+
 \shortentry
   {Arrows in Commercial Web Applications}
   {HotWeb}
   {2016}
-  
+
 \shortentry
   {Type Inference of Asynchronous Arrows in JavaScript}
   {REBLS}
