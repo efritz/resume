@@ -50,7 +50,7 @@
 \definecolor{white}{HTML}{FFFFFF}
 \definecolor{gray}{HTML}{4D4D4D}
 \definecolor{lightgray}{HTML}{888888}
-\definecolor{header}{HTML}{33A3FD}
+\definecolor{header}{HTML}{4C98B2}
 
 \newfontfamily\bodyfont[Path=open-sans/]{OpenSans-Regular.ttf}
 \newfontfamily\thinfont[Path=open-sans/]{OpenSans-Light.ttf}
