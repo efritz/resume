@@ -4,7 +4,7 @@ This is my resume in LaTeX. Feel free to modify the .tex file to create your own
 
 ## License
 
-Copyright (c) 2019 Eric Fritz
+Copyright (c) 2022 Eric Fritz
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
