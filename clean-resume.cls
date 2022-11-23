@@ -11,8 +11,8 @@
 
 \newcommand{\guttersize}{4cm}
 \newcommand{\gutterpadding}{.5cm}
-\newcommand{\headerheight}{3cm}
-\newcommand{\headermargin}{1cm}
+\newcommand{\headerheight}{2cm}
+\newcommand{\headermargin}{0.25cm}
 
 %
 % Derived Spacing
@@ -102,9 +102,13 @@
       minimum height=\headerheight,
     ] (box) at (current page.north) {};
 
-    \node[anchor=north, yshift=-1em] (a) at (box.north) { \headertext{#1}{\asize}{white}  };
-    \node[anchor=north] (b) at (box.south) { \headertext{#2}{\bsize}{header} };
-    \node[anchor=south] (c) at (box.south) { \headertext{#3}{\csize}{white}  };
+    \node[anchor=north, yshift=-1em] (a) at (box.north) {
+      \headertext{#1}{\asize}{white}
+      \headertext{(#2)}{\bsize}{white}
+    };
+    \node[anchor=north] (c) at (box.south) {
+      \headertext{#3}{\csize}{header}
+    };
   \end{tikzpicture}
   %
   \vspace{\headermargin}
