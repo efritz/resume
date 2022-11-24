@@ -130,10 +130,6 @@
   #1 \gutter{\thinfont #3} \hfill \soft{#2}
 }
 
-\newcommand{\task}[1]{
-  $\diamond$ #1 \\
-}
-
 \newcommand{\soft}[1]{
   {\footnotesize\addfontfeature{Color=lightgray} #1}
 }
