@@ -67,6 +67,7 @@
 
 %
 % Header Font Sizes
+
 \newcommand{\asize}{40pt}
 \newcommand{\bsize}{16pt}
 \newcommand{\csize}{10pt}
@@ -117,7 +118,7 @@
 %
 % Content Commands
 
-\newcommand{\entry}[5]{
+\newcommand{\detailentry}[5]{
   \textbf{#1} \gutter{\thinfont #3} \hfill \soft{#4} \\
   \ifthenelse{\equal{#2}{}}{}{
     {\thinfont\small #2}
@@ -126,7 +127,7 @@
   #5
 }
 
-\newcommand{\shortentry}[3]{
+\newcommand{\lineentry}[3]{
   #1 \gutter{\thinfont #3} \hfill \soft{#2}
 }
 
