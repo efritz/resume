@@ -69,7 +69,7 @@
 % Header Font Sizes
 \newcommand{\asize}{40pt}
 \newcommand{\bsize}{16pt}
-\newcommand{\csize}{9pt}
+\newcommand{\csize}{10pt}
 
 %
 % Basic Layout Overrides
