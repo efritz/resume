@@ -125,12 +125,15 @@
 }
 
 \newcommand{\lineentry}[3]{
-  #1 \gutter{\thinfont #3} \hfill \soft{#2}
+  #1 \gutter{\datefont{#3}} \hfill \soft{#2}
 }
 
-\newcommand{\soft}[1]{
-  {\footnotesize\addfontfeature{Color=lightgray} #1}
-}
+%
+% Text styles
+
+\newcommand{\soft}[1]{{\footnotesize\muted{#1}}}
+\newcommand{\datefont}[1]{{\thinfont\muted{#1}}}
+\newcommand{\muted}[1]{{\addfontfeature{Color=lightgray} #1}}
 
 %
 % Internal Commands
