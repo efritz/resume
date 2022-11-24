@@ -2,7 +2,7 @@
 %% Copyright 2022 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
-\ProvidesClass{clean-resume}[2016/04/26 resume class]
+\ProvidesClass{clean-resume}[2022/11/24 resume class]
 
 \LoadClass{article}
 
