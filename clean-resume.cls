@@ -80,7 +80,6 @@
 \renewcommand{\section}[1]{
   \par\vspace{\parskip}
   {\LARGE\headingfont\color{header} #1}
-  \par\vspace{\parskip}
 }
 
 %
