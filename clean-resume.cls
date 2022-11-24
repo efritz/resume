@@ -119,12 +119,9 @@
 % Content Commands
 
 \newcommand{\detailentry}[5]{
-  \textbf{#1} \gutter{\thinfont #3} \hfill \soft{#4} \\
-  \ifthenelse{\equal{#2}{}}{}{
-    {\thinfont\small #2}
-    \ifthenelse{\equal{#5}{}}{}{\\}
-  }
-  #5
+  \textbf{#1} \gutter{\datefont{#3}} \\
+  {\thinfont\small #2} \hfill \soft{#4}
+  \ifthenelse{\equal{#5}{}}{}{\\ #5}
 }
 
 \newcommand{\lineentry}[3]{
