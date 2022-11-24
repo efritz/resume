@@ -1,5 +1,5 @@
 %% ------------------------------------------------------------------------
-%% Copyright 2016 Eric Fritz (eric@eric-fritz.com).
+%% Copyright 2022 Eric Fritz (eric@eric-fritz.com).
 %% ------------------------------------------------------------------------
 
 \ProvidesClass{clean-resume}[2016/04/26 resume class]
