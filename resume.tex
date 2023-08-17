@@ -14,7 +14,9 @@
 \newcommand{\articeslink}{\href{https://eric-fritz.com/articles}{eric-fritz.com/articles}}
 \newcommand{\paperslink}{\href{https://eric-fritz.com/papers}{eric-fritz.com/papers}}
 
-\header{eric fritz}{I build software}{\phone $~\cdot~$ \email $~\cdot~$ \website}
+\header{eric fritz}{I build software}{\phone $~\cdot~$ \email $~\cdot~$ additional resume details at \underline{\website}}
+
+Staff software engineer with over 8 years of professional experience and over 10 years of experience researching and creating developer tools. Focusing on compounding the ability of fellow engineers.
 
 \section{core competencies}
 
@@ -23,37 +25,32 @@
   Containerization (Docker/K8s+Firecracker) $\cdot$
   Observability $\cdot$
   \\
-  Technical writing $\cdot$ Performance optimization (algorithms, Postgres) $\cdot$
-  Org-wide code standardization
+  Technical writing $\cdot$ Performance optimization (algorithms, databases) $\cdot$
+  Org-wide standards
 }
 
 \section{work history}
 
-\muted{Additional work history details can be found at \underline{\resumelink}.}
-
 \detailentry
   {Sourcegraph}
-  {Staff-level Software Engineer, Lead of the Language Platform Team}
+  {Staff Software Engineer, Language Platform Team Lead}
   {2019 - Now}
-  {Milwaukee, WI (Remote)}
+  {Go, TypeScript, Postgres, LLMs}
   {
-    I am the primary author and owner of the data platform layer that powers precise code intelligence that the production, ingestion, persistence, and aggregation of source code index data powering code navigation features such as cross-repository go-to-definition and global find-references.
-    \\\\
-    My current focus within the team is to
-    (1) extend the platform to enable a new set of powerful code navigation and intelligence features,
-    (2) prepare the platform for the next order-of-magnitude scale, and
-    (3) increase adoption by automatically indexing source code without user configuration.
-    \\\\
-    I often solve problems outside of my immediate team, frequently specializing in database query tuning, program optimization, and architectural/distribution concerns.
+    Sourcegraph is a fast-growing developer tools company with a mixture of on-prem and SaaS clients for some of the largest technology companies in the world. Among my contributions:
+    \\
+    $\cdot$ Designed and implemented the Precise Code Intelligence Platform that produces and persists analysis of source code to power features such as cross-repository/global code navigation. More recently, we've integrated this data lake into our AI Coding assistant, Cody, to provide additional context when answering questions about a code base. \\
+    $\cdot$ Scaled and optimized our data layer as the resident Postgres expert. Our SaaS database stores 15TB of fresh analysis data at any given point in time, and required the development of new bulk write techniques and novel relational schemas. \\
+    $\cdot$ Provided mentorship, project management, and technical guidance for half a dozen engineers as an "Uber Tech Lead". Ownership of infrastructure projects originally written within the Language Platform Team have transitioned to dedicated teams, including executors (which safely invoke untrusted code to produce code analysis results), as well as our database schema migration, schema drift detection, and instance upgrade infrastructure (self-serve upgrades prior to this work would more often than not fail and corrupt data).
   }
 
 \detailentry
   {Mitel}
   {Senior Software Engineer, Labs Team}
   {2015 - 2019}
-  {Milwaukee, WI}
+  {Go, Python, Distributed systems}
   {
-    As part of the Labs team, I was the primary designer of \emph{Nighthawk}, an IFTTT-like engine and the surrounding ecosystem to support integration of internal and external services, and \emph{Kestrel}, Mitel's IoT infrastructure and collaboration strategy. Before Labs, I worked on \emph{Summit}, a CPaaS system that allows users to build voice and SMS applications with Lua code that runs in a containerized sandbox.
+    I was the primary designer of \emph{Nighthawk}, an IFTTT-like engine and the surrounding ecosystem to support integration of internal and external services, and \emph{Kestrel}, Mitel's IoT infrastructure and collaboration strategy. Before that, I worked on \emph{Summit}, a CPaaS system that allows users to build voice and SMS applications with Lua code that runs in a containerized sandbox.
   }
 
 \section{education}
@@ -67,16 +64,9 @@
     \emph{`Waddle - Always-Canonical Intermediate Representation'}: an optimizing compiler and a supporting set of algorithms whose internal representation never \emph{goes stale}. Local updates to internal structures reduces compilation time while yielding the same output.
   }
 
-\detailentry
-  {M.S. Computer Science}
-  {University of Wisconsin - Milwaukee}
-  {2013}
-  {Milwaukee, WI}
-  {}
-
 \section{publications}
 
-\muted{An author's version of the following publications can be found at \underline{\paperslink}, and technical deep-dives about my current work are indexed at \underline{\articeslink}. Common themes include systems architecture, algorithms, optimization of Go programs, and specific advice on how to use Postgres effectively for maximum performance.}
+\muted{Author's versions and articles deep-diving into my current work can be found on my website.}
 
 \lineentry
   {Waddle - Always-Canonical Intermediate Representation}
