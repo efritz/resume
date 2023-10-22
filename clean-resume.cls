@@ -32,6 +32,7 @@
 \RequirePackage{xcolor}
 \RequirePackage{parskip}
 \RequirePackage{hyperref}
+\RequirePackage{hycolor}
 \RequirePackage{enumitem}
 \RequirePackage[quiet]{fontspec}
 
@@ -133,6 +134,14 @@
 \newcommand{\soft}[1]{{\footnotesize\muted{#1}}}
 \newcommand{\datefont}[1]{{\thinfont\muted{#1}}}
 \newcommand{\muted}[1]{{\addfontfeature{Color=lightgray} #1}}
+
+%
+% Link styles
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=[rgb]{0.298,0.596,0.698}, % mimmics header color
+}
 
 %
 % Internal Commands
