@@ -34,6 +34,7 @@
 \RequirePackage{hyperref}
 \RequirePackage{hycolor}
 \RequirePackage{enumitem}
+\RequirePackage{scrextend}
 \RequirePackage[quiet]{fontspec}
 
 \RequirePackage[
